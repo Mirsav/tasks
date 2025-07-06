@@ -19,7 +19,7 @@ function App() {
         <Comp1 numb={2} str={'Игрок'} bool={false} obj={{name: 'Алексей'}} func={()=> 'остается дома и'} arr={[' не летит в небо']}/>
         <Comp1 numb={3} str={'Игрок'} bool={true} obj={{name: 'Стас'}} func={()=> 'набираем высоту и'} arr={['летит в небо']}/>
         <Comp1 numb={4} str={'Игрок'} bool={false} obj={{name: 'Олег'}} func={()=> 'остается дома и'} arr={['не летит в небо']}/>
-        <Comp1 numb={5} str={'Игрок'} bool={false} obj={{name: 'Алик'}} func={()=> 'остается дома и'} arr={['не летит в небо']}/>
+        <Comp1 numb={53} str={'Игрок'} bool={false} obj={{name: 'Алик'}} func={()=> 'остается дома и'} arr={['не летит в небо']}/>
         <Comp1 numb={6} str={'Игрок'} bool={true} obj={{name: 'Дрю'}} func={()=> 'набираем высоту и'} arr={['летит в небо']}/>
         </h6>
     </>
