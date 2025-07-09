@@ -8,6 +8,7 @@ const Obj =()=>{
 });
     return (
     <>
+    <h3>Профиль Пользователя</h3>
     <p>Имя: {user.name}</p>
     <p>Возраст: {user.age}</p>
     <p>Активен: {user.isActive? 'Да' : 'Нет'}</p>
