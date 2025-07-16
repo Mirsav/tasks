@@ -8,7 +8,7 @@ const Arr =()=>{
     <ul>{tasks.map((item,index)=> <li key={index}>{item}</li>)}</ul>
     <button onClick={()=>setTasks([...tasks, 'Вынести мусор'])}>Добавить задачу</button>
     <button onClick={()=>setTasks([])}>Удалить</button>
-    <button onClick={()=>setTasks(tasks.slice(0,-1))}>Последняя задача</button>
+    <p><button onClick={()=>setTasks(tasks.slice(0,-1))}>Последняя задача</button></p>
     </>
     )
 }

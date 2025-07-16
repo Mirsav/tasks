@@ -14,7 +14,7 @@ const Obj =()=>{
     <p>Активен: {user.isActive? 'Да' : 'Нет'}</p>
     <button onClick={()=>setUser({...user, name: 'Артем'})}>Изменить имя</button>
     <button onClick={()=>setUser({...user, age: user.age+1})}>Увеличить возраст</button>
-    <button onClick={()=>setUser({...user, isActive: !user.isActive})}>Переключить активность</button>
+    <p><button onClick={()=>setUser({...user, isActive: !user.isActive})}>Переключить активность</button></p>
     </>
     )
 }
