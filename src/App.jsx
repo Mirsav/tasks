@@ -1,19 +1,15 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import MyComp from './MyComp'
+import React, { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
+import LifeCycleComponent from "./LifeCycleComponent";
 
-
-function App (){
-  const [state, setState] = useState(1)
+function App() {
   return (
-    <>
-  {state %2 == 0 ? <MyComp number={state}/> : <h1>Пусто!!!</h1>}
-  <button onClick={()=> setState(state=>state+1)}>KILL</button>
-    </>
+  <>
+  <LifeCycleComponent/>
+  </>
   )
 }
 
-export default App
-
+export default App;
