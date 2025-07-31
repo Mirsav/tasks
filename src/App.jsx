@@ -1,15 +1,16 @@
-import React, { useState } from "react";
+import React, { userEffect, useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-import LifeCycleComponent from "./LifeCycleComponent";
+import RandomPic from "./RandomPic";
 
 function App() {
   return (
-  <>
-  <LifeCycleComponent/>
-  </>
-  )
+    <>
+      <h1>Галерея собак</h1>
+      <RandomPic />
+    </>
+  );
 }
 
 export default App;
