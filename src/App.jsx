@@ -7,8 +7,6 @@ import RandomPic from "./RandomPic";
 function App() {
   return (
     <>
-      <h1>Галерея собак</h1>
-      <RandomPic />
     </>
   );
 }
