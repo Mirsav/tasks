@@ -20,8 +20,7 @@ const addItem = (index)=>{
 }
   const handleInput=(e)=>{
     if(e.key==='Enter' && value.trim() !== '')
-      setItems([...items, value.trim()])
-      setValue(value)
+      setItems([...items, value])
   }
 
   return (
