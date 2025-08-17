@@ -1,23 +1,17 @@
-import { useState, useRef, useEffect } from "react";
+import React from "react";
 
-function List({ arr }) {
-    const [items, setItem] = useState(arr)
-
-    const addItem = (index)=>{
-        const newItem = [...items]
-        newItem[index] = `!!!${newItem[index]}`
-        setItem(newItem)
-    }
+function List({items, onUpdateItem}) {
+    
 
   return (
-  <>
+  <ul>
   {items.map((item, index) => (
     <li key={index}>
         {item}
-        <button onClick={()=>addItem(index)}>Add</button>
+        <button onClick={()=>onUpdateItem(index)}>Add</button>
     </li>
   ))}
-  </>
+  </ul>
   )
 }
 
