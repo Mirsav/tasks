@@ -5,29 +5,43 @@ import "./App.css";
 import List from "./List";
 
 function App() {
-  const [items, setItems] = useState(['First ','Second ','Third ','Fourth ', 'Fifth '])
-  const [value, setValue] = useState('')
-  const res = useRef(null)
+  const [items, setItems] = useState([
+    "First",
+    "Second",
+    "Third",
+    "Fourth",
+    "Fifth",
+  ]);
+  const [value, setValue] = useState("");
+  const res = useRef(null);
 
-const addItem = (index)=>{
-        const newItem = [...items]
-        newItem[index] = `!!!${newItem[index]}`
-        setItems(newItem)
-    }
+  const addItem = (index) => {
+    const newItem = [...items];
+    newItem[index] = `!!!${newItem[index]}`;
+    setItems(newItem);
+  };
 
   function focusInput() {
-  res.current.focus();
-}
-  const handleInput=(e)=>{
-    if(e.key==='Enter' && value.trim() !== '')
-      setItems([...items, value])
+    res.current.focus();
   }
+  const handleInput = (e) => {
+    if (e.key === "Enter" && value.trim() !== "") {
+      setItems([...items, value]);
+      setValue("");
+    }
+  };
 
   return (
     <>
-    <input ref={res} type="text" value={value} onChange={(e)=> setValue(e.target.value)} onKeyDown={handleInput} />
-    <button onClick={focusInput}>Фикс</button>
-    <List items={items} onUpdateItem={addItem}/>
+      <input
+        ref={res}
+        type="text"
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
+        onKeyDown={handleInput}
+      />
+      <button onClick={focusInput}>Фикс</button>
+      <List items={items} onUpdateItem={addItem} />
     </>
   );
 }
