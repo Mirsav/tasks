@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useMemo, useState, useCallback} from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
@@ -16,28 +16,29 @@ import CounterButton from "./CounterButton";
 
   const allItems = generatedItem()
 
-
-
+  
 function App() {
   const [search, setSearch] = useState('')
   const [count, setCount] = useState(0)
   
-  const plusCount = ()=>{
-    setCount(count+1)
-  }
+  const plusCount = useCallback(()=>{
+    setCount((prevCount)=> prevCount+1)
+  },[])
 
-  // const handleSearch = ()=>{
-  //   setSearch(search)
-  // }
+  const handleSearch = useCallback((value) =>{
+    setSearch(value)
+  },[])
 
-  const filtered =
-    allItems.filter((item)=>
+  const filtered = useMemo(() =>{
+    return allItems.filter(item=>
     item.text.toLowerCase().includes(search.toLowerCase()))
+  }, [search])
+    
 
   return (
     <>
     <h3>Отсортированный список</h3>
-      <SearchInput onChange={setSearch}/>
+      <SearchInput onChange={handleSearch}/>
       <ItemList items={filtered}/>
       <CounterButton onClick={plusCount} count={count}/>
     </>

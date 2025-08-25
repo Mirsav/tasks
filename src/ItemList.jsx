@@ -1,3 +1,5 @@
+import React, {memo} from "react"
+
 function ItemList({items}){
 console.log('render ItemList')
     return (
@@ -11,4 +13,4 @@ console.log('render ItemList')
     )
 }
 
-export default ItemList
+export default memo(ItemList)

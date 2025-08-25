@@ -1,4 +1,4 @@
-import { memo } from "react"
+import React, {memo} from "react"
 
 function CounterButton({onClick, count}){
     console.log('render Button')
