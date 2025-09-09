@@ -9,9 +9,6 @@ import ArrObj from "./ArrObj";
 function App() {
   return (
     <>
-      <Obj />
-      <Arr />
-      <ArrObj />
     </>
   );
 }
