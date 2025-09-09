@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 
-const StyledButton = styled.button`
+const Button = styled.button`
   background: ${({ theme }) => theme.background};
   border: 2px solid ${({ theme }) => theme.toggleBorder};
   color: ${({ theme }) => theme.text};
@@ -18,9 +18,9 @@ const StyledButton = styled.button`
 
 const Toggle = ({ theme, toggleTheme }) => {
   return (
-    <StyledButton onClick={toggleTheme}>
+    <Button onClick={toggleTheme}>
       Switch to {theme === 'light' ? 'Dark' : 'Light'} Mode
-    </StyledButton>
+    </Button>
   );
 };
 
