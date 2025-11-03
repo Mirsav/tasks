@@ -9,6 +9,7 @@ import Comp4 from './Comp4.jsx'
 import Comp5 from './Comp5.jsx'
 import Comp6 from './Comp6.jsx'
 
+
 function App() {
   
   return (
