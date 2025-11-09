@@ -21,8 +21,6 @@ export const Header = () => {
   return (
     <header
       style={{
-        padding: "20px",
-        margin: "10px",
         ...themeStyles[theme],
       }}
     >
