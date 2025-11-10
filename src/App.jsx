@@ -39,8 +39,9 @@ function App() {
     <>
     <h3>Отсортированный список</h3>
       <SearchInput onChange={handleSearch}/>
-      <ItemList items={filtered}/>
       <CounterButton onClick={plusCount} count={count}/>
+      <ItemList items={filtered}/>
+      
     </>
   );
 }
