@@ -15,13 +15,14 @@ const generatedItem = () => {
 
 const allItems = generatedItem();
 
-const RenderItemList = withRenderTracker(ItemList, "ItemList");
-const RenderSearchInput = withRenderTracker(SearchInput, "SearchInput");
-const RenderCounterButton = withRenderTracker(CounterButton, "CounterButton");
+const RenderCounterButton = withRenderTracker(CounterButton, 'CounterButton')
+const RenderItemList = withRenderTracker(ItemList, 'ItemList')
+const RenderSearchInput = withRenderTracker(SearchInput, 'SearchInput')
 
 function App() {
   const [search, setSearch] = useState("");
   const [count, setCount] = useState(0);
+
 
   const plusCount = useCallback(() => {
     setCount((prevCount) => prevCount + 1);
