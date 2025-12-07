@@ -12,7 +12,6 @@ const RegistrationForm = () => {
     console.log('Данные регистрации', data)
     alert('Регистрация прошла успешно')
   };
-
   const password = watch("password")
 
   return (
